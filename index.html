@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Text Shadow Maker | CSS-Tricks.ir</title>
+
+  <link href="css/material.min.css" rel="stylesheet" />
+  <link href="css/angularjs-color-picker.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" /> -->
+
+  <script src="js/angular.min.js"></script>
+  <script src="js/material.min.js"></script>
+  <script src="js/tinycolor.min.js"></script>
+  <script src="js/angularjs-color-picker.min.js"></script>
+  <script src="js/script.js"></script>
+  
+</head>
+
+<body ng-app="textShadowMaker" ng-controller="AppCtrl">
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+    <div class="mdl-layout__drawer">
+      <h1 class="mdl-layout-title">Text Shadow Maker</h1>
+      
+      <div class="mdl-grid input-wrapper">
+        <div class="mdl-cell mdl-cell--1-col">
+          <label>X</label>
+        </div>
+        <div class="mdl-cell mdl-cell--11-col">
+          <input ng-model="x" min="-100" max="100" class="mdl-slider mdl-js-slider" type="range" min="0" max="100" value="25" tabindex="0" />
+        </div>
+      </div>
+
+      <div class="mdl-grid input-wrapper">
+        <div class="mdl-cell mdl-cell--1-col">
+          <label>Y</label>
+        </div>
+        <div class="mdl-cell mdl-cell--11-col">
+          <input ng-model="y" min="-100" max="100" class="mdl-slider mdl-js-slider" type="range" min="0" max="100" value="25" tabindex="0" />
+        </div>
+      </div>      
+
+      <div class="mdl-grid input-wrapper">
+        <div class="mdl-cell mdl-cell--1-col">
+          <label>Blur</label>
+        </div>
+        <div class="mdl-cell mdl-cell--11-col">
+          <input ng-model="blur" min="0" class="mdl-slider mdl-js-slider" type="range" min="0" max="100" value="25" tabindex="0" />
+        </div>
+      </div>      
+
+      <div class="mdl-grid input-wrapper">
+        <div class="mdl-cell mdl-cell--1-col">
+          <label>3D</label>
+        </div>
+        <div class="mdl-cell mdl-cell--11-col">
+          <input ng-model="diameter" min="0" class="mdl-slider mdl-js-slider" type="range" min="0" max="100" value="25" tabindex="0" />
+        </div>
+      </div>
+
+      <div class="mdl-grid input-wrapper">
+        <div class="mdl-cell mdl-cell--3-col">
+          <label>Color</label>
+        </div>
+        <div class="mdl-cell mdl-cell--9-col">
+          <!-- <input class="input" type="color" ng-model="color" value="#ff00ff" id="bgColor" /> -->
+          <!-- <label class="fa fa-eyedropper label color-icon" for="bgColor" title="Pick your color"></label> -->
+          <color-picker ng-model="myColor"
+            color-picker-format="'hsl'"
+            color-picker-alpha="true"
+            color-picker-swatch="true"
+            color-picker-swatch-only="true"
+          ></color-picker>
+        </div>
+      </div>
+
+    </div>
+    <main class="mdl-layout__content">
+      <div class="page-content">
+        <h1 class="sample" contenteditable style="text-shadow: {{x}}px {{y}}px {{blur}}px {{myColor}};">Text Shadow</h1>
+
+        <div class="code-area-container">
+          <div class="code-area">
+            <span class="token-property">text-shadow</span>: {{x}}px {{y}}px {{blur}}px {{myColor}};
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+*,
+*:after,
+*:before
+{
+  box-sizing: border-box;
+}
+
+.mdl-layout__drawer>.mdl-layout__title,
+.mdl-layout__drawer>.mdl-layout-title {
+    line-height: 64px;
+    padding-left: 25px;
+}
+
+main.mdl-layout__content {
+  position: relative;
+}
+
+.input-wrapper {
+  margin: .5em 0;
+}
+
+.sample {
+  font-size: 5em;
+  margin: 2em auto 0;
+  text-align: center;
+  outline: 0;
+}
+
+.code-area-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #272822;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.code-area-container:before {
+  display: block;
+  width: 100%;
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 7px;
+
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%); /* W3C */
+}
+
+.code-area-container:after {
+  display: block;
+  width: 100%;
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 7px;
+
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(bottom, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(bottom, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+  background: linear-gradient(to top, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%); /* W3C */
+}
+
+.code-area {
+  /*display: table;*/
+  direction: ltr;
+  margin: 0 auto;
+  padding: 0 1em;
+  background-color: #272822;
+  color: #F8F8F2;
+  text-align: left;
+  white-space: pre;
+  line-height: 1.5;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+}
+
+.token-property {
+  color: #F92672;
+}
+
+.token-function {
+  color: #E6DB74;
+}
+
+.input-group-addon {
+  display: inline-block;
+  height: 35px;
+  border-radius: 3px !important;
+  position: relative;
+  top: -0.5em;
+}
+
+.color-picker-wrapper .color-picker-panel.color-picker-panel-left {
+  top: 50px;
+  left: -55px;
+}
